@@ -3,12 +3,12 @@
 このスクリプトを実行することで、不要なRaw画像を一括で削除することができます。  
 Windows10環境のみで動作を確認しています。  
   
-#Usage
+# Usage
 仕分けしたい画像ファイルと同じ階層にスクリプトをコピーしてください。  
 削除したい写真のjpgファイルのみを削除し、全て削除し終えたらこのスクリプトを実行します。  
 スクリプト実行後、削除しなかったjpgファイルと同名のrawファイルのみが残ります。  
   
-#Example
+# Example
 <階層構成>  
 　dir/  
 　├ This script  
@@ -41,6 +41,6 @@ Windows10環境のみで動作を確認しています。
 　├ hoge4.jpg  
 　└ hoge4.raw  
  
-#Development environment
+# Development environment
 Python 3.6  
 Windows10 pro x64 1903  
