@@ -31,9 +31,15 @@ def ShottimeFromExiftime(date_time_original_exif):
     return re.sub(r':', '', date_time_original_exif[:-9])
 
 def GetFileUpdateDateTime(file_path):
-    with pathlib.Path(file_path) as p:
-        update_time = datetime.datetime.fromtimestamp(p.stat().st_mtime) #datetimeに変換
-        return update_time.strftime("%Y%m%d")
+    #Windowsでのみ確認。
+    if os.name = "nt":
+        with pathlib.Path(file_path) as p:
+            update_time = datetime.datetime.fromtimestamp(p.stat().st_mtime) #datetimeに変換
+            return update_time.strftime("%Y%m%d")
+    else:
+        with pathlib.Path(file_path) as p:
+            update_time = datetime.datetime.fromtimestamp(p.stat().st_ctime) #datetimeに変換
+            return update_time.strftime("%Y%m%d")
     
 
 for file_name in os.listdir(iphone_pic_dir):
