@@ -1,5 +1,5 @@
 #Twitterでとってきた_largeつき画像のファイル名を直すプログラム
-#作った人:heliumu
+#作った人:ykaito39
 
 # coding: UTF-8
 import sys
@@ -10,7 +10,8 @@ import os
 if len(sys.argv) == 2:
     DIR == sys.argv[1]
 elif os.name == 'nt':
-    DIR = 'C:\\Users\\' + os.getlogin() + '\\Downloads\\RE\\'
+    # DIR = 'C:\\Users\\' + os.getlogin() + '\\Downloads\\' #書き換えてください
+    DIR = './'
 else:
     DIR = '~/Downloads/'
 
