@@ -9,12 +9,13 @@ import os
 #この中に入っている画像が対象
 if len(sys.argv) == 2:
     DIR == sys.argv[1]
-elif os.name == 'nt':
-    # DIR = 'C:\\Users\\' + os.getlogin() + '\\Downloads\\' #書き換えてください
-    DIR = './'
+#elif os.name == 'nt':
+#    DIR = 'C:\\Users\\' + os.getlogin() + '\\Downloads\\' #書き換えてください
+#else:
+#    DIR = '~/Downloads/'
 else:
-    DIR = '~/Downloads/'
-
+    DIR = './'
+        
 #ディレクトリ内のファイル一覧を取得
 #DIRが不正ならここで終了する
 try:
